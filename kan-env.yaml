@@ -1,0 +1,15 @@
+name: kan
+channels:
+  - conda-forge
+  - anaconda
+  - pytorch
+dependencies:
+  - python=3.11
+  - pip
+  - pycytominer
+  - conda-forge::tqdm
+  - matplotlib
+  - requests
+  - ipykernel
+  - seaborn
+  - pytorch=2.2.2
