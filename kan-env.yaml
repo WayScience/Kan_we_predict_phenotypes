@@ -13,6 +13,7 @@ dependencies:
   - ipykernel
   - seaborn
   - nbconvert
+  - pre-commit
   - pytorch
   - pip:
     - pykan==0.2.5
