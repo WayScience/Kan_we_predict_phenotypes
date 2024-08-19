@@ -26,9 +26,9 @@
 
 
 import pathlib
-import requests
 import zipfile
 
+import requests
 
 # ## Helper functions
 #
@@ -38,7 +38,7 @@ import zipfile
 
 
 def download_and_extract(url, extract_to):
-    """ Downloads a ZIP file from a specified URL, extracts its contents to a given directory,
+    """Downloads a ZIP file from a specified URL, extracts its contents to a given directory,
     and removes the ZIP file after extraction.
 
     Parameters
@@ -64,15 +64,15 @@ def download_and_extract(url, extract_to):
     """
 
     # Download the file
-    local_filename = url.split('/')[-1].split('?')[0]
+    local_filename = url.split("/")[-1].split("?")[0]
     with requests.get(url, stream=True) as r:
         r.raise_for_status()
-        with open(local_filename, 'wb') as f:
+        with open(local_filename, "wb") as f:
             for chunk in r.iter_content(chunk_size=8192):
                 f.write(chunk)
 
     # Unzip the file
-    with zipfile.ZipFile(local_filename, 'r') as zip_ref:
+    with zipfile.ZipFile(local_filename, "r") as zip_ref:
         zip_ref.extractall(extract_to)
 
     # Clean up by removing the zip file after extraction
@@ -100,4 +100,3 @@ normalized_feats_url = "https://zenodo.org/records/7967386/files/3.normalize_dat
 # Download and extract files
 download_and_extract(extracted_feats_url, data_dir)
 download_and_extract(normalized_feats_url, data_dir)
-
