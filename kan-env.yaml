@@ -12,4 +12,7 @@ dependencies:
   - requests
   - ipykernel
   - seaborn
-  - pytorch=2.2.2
+  - nbconvert
+  - pytorch
+  - pip:
+    - pykan==0.2.5
