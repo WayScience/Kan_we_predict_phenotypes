@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # activate conda env
-conda activate cell-injury
+conda activate kan
 
 # convert notebooks into python scripts
-jupyter nbconvert --to python --output-dir=nbconverted/ *.ipynb
+jupyter nbconvert --to script --output-dir=nbconverted/ *.ipynb
 
 # run the scripts
-python nbconverted/0.download-data.py
+conda run -n kan python nbconverted/0.download-data.py

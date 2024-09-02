@@ -37,7 +37,7 @@ import requests
 # In[2]:
 
 
-def download_and_extract(url, extract_to):
+def download_and_extract(url: str, extract_to: str | pathlib.Path):
     """Downloads a ZIP file from a specified URL, extracts its contents to a given directory,
     and removes the ZIP file after extraction.
 
