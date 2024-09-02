@@ -1,4 +1,4 @@
-name: kan
+name: cell-kan
 channels:
   - conda-forge
   - anaconda
