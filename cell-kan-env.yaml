@@ -1,0 +1,19 @@
+name: cell-kan
+channels:
+  - conda-forge
+  - anaconda
+  - pytorch
+dependencies:
+  - python=3.11
+  - pip
+  - conda-forge::pycytominer
+  - conda-forge::tqdm
+  - conda-forge::matplotlib
+  - conda-forge::requests
+  - conda-forge::ipykernel
+  - conda-forge::seaborn
+  - conda-forge::nbconvert
+  - conda-forge::pre-commit
+  - conda-forge::pytorch
+  - pip:
+    - pykan==0.2.5
